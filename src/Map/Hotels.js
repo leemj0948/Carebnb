@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Fliter from './Component/Filter';
+import calendar from '../assets/calendar.svg';
+import HotelInfo from './Component/HotelInfo';
+import MapList from '../assets/data/maplist';
 
 const Hotels = props => {
   return (
@@ -14,10 +17,17 @@ const Hotels = props => {
       </Filters>
       <SmallInfo>
         <Info>
-          <Bold>예약을 서두르세요.</Bold>여행하시려는 날짜에는 서울 숙소의 26%가
-          이미 예약되었습니다.
+          <Calendar src={calendar} />
+          <Bold>예약을 서두르세요.</Bold> 여행하시려는 날짜에는 서울 숙소의
+          26%가 이미 예약되었습니다.
         </Info>
       </SmallInfo>
+      <InfoSection>
+        {MapList.map(elm => {
+          console.log(elm);
+          return <HotelInfo data={elm} />;
+        })}
+      </InfoSection>
     </Backgorund>
   );
 };
@@ -30,7 +40,10 @@ const filterName = [
 ];
 
 const Backgorund = styled.div`
-  width: 100%;
+  overflow-y: scroll;
+  width: 93%;
+  height: 500px;
+  padding: 20px 30px;
 `;
 const OptionInfo = styled.h1`
   color: inherit;
@@ -55,15 +68,27 @@ const Filters = styled.div`
 `;
 
 const SmallInfo = styled.div`
+  position: relative;
   width: 100%;
   height: 3vw;
-  padding: 40px 0;
+  padding: 40px 0 40px 30px;
 `;
 const Info = styled.span`
+  position: relative;
   font-size: 1em;
 `;
 const Bold = styled.span`
   font-weight: bold;
+`;
+const Calendar = styled.img`
+  position: absolute;
+  top: -3px;
+  left: -34px;
+  width: 1.5vw;
+  margin: 2px;
+`;
+const InfoSection = styled.div`
+  width: 100%;
 `;
 
 export default Hotels;

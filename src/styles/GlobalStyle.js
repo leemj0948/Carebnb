@@ -9,9 +9,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Open Sans Condensed', sans-serif;
-  
+    
   }
-
 
   input {
     border-style: none;

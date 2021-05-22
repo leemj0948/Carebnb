@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Mymap from './Component/Mymap';
 import Hotels from './Hotels';
 
-const MapPage = props => {
+const MapMainPage = props => {
   return (
     <Background>
       <Hotels />
@@ -16,4 +16,4 @@ const Background = styled.div`
   ${({ theme }) => theme.flexSet('space-around', 'center')}
 `;
 
-export default MapPage;
+export default MapMainPage;

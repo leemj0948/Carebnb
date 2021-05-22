@@ -9,6 +9,11 @@ const MapList = [
       'https://i.ibb.co/5W8WvbB/1.jpg',
     ],
     distance: 30,
+    address: 'Donggyo-dong,Mapo-gu',
+    title: '♥격리&흡연가능♥ 홍대역 10초거리 옥탑 복층 테라스방',
+    option1: '최대 인원 5명 · 침실 1개 · 침대 4개 · 욕실 1개',
+    option2: '주방 무선인터넷 에어컨 헤어드라이어',
+    fee: 80871,
   },
   {
     id: 2,
@@ -19,6 +24,11 @@ const MapList = [
       'https://i.ibb.co/LCb0xLB/1-1.jpg',
     ],
     distance: 30,
+    address: 'Donggyo-dong,Mapo-gu',
+    title: '서울 엘리시아',
+    option1: '최대 인원 3명 · 침실 3개 · 침대 1개 · 욕실 1개',
+    option2: '주방 무선인터넷 에어컨 헤어드라이어',
+    fee: 80871,
   },
   {
     id: 3,
@@ -29,6 +39,12 @@ const MapList = [
       'https://i.ibb.co/gPBJknb/2-3.jpg',
     ],
     distance: 30,
+    address: 'Donggyo-dong,Mapo-gu',
+    title:
+      '데이지29. 제 얼굴클릭해 내리면 다른 숙소가 있습니다. 데이지240공실.최고뷰와좋은침대.',
+    option1: '최대 인원 2명 · 침실 1개 · 침대 1개 · 욕실 1개',
+    option2: '주방 무선인터넷 에어컨 헤어드라이어',
+    fee: 80871,
   },
   {
     id: 4,
@@ -39,5 +55,11 @@ const MapList = [
       'https://i.ibb.co/LthKvPD/3-3.jpg',
     ],
     distance: 30,
+    address: 'Donggyo-dong,Mapo-gu',
+    title: '#인천논현역 #자가격리가능 #무료넷플릭스 #철저한소독 #',
+    option1: '최대 인원 3명 · 침실 1개 · 침대 1개 · 욕실 1개',
+    option2: '주방 무선인터넷 에어컨 헤어드라이어',
+    fee: 80871,
   },
 ];
+export default MapList;
