@@ -8,7 +8,9 @@ const GlobalStyle = createGlobalStyle`
 	* {
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Open Sans Condensed', sans-serif;
+    /* font-family: 'Open Sans Condensed', sans-serif; */
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Yeon Sung', cursive;
     
   }
 
