@@ -1,21 +1,55 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoHeartOutline, IoHeartSharp } from 'react-icons/io5';
+import ImgSlider from './ImgSlider';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
 const HotelInfo = ({ data }) => {
   const [isHeart, setIsHeart] = useState(true);
+  const [moveX, setMoveX] = useState(0);
   const clickHeart = () => {
     setIsHeart(!isHeart);
     console.log(isHeart);
   };
+  const slideHandle = number => {
+    setMoveX(moveX + number);
+  };
   const { address, fee, imgUrl, option1, option2, title } = data;
-  console.log(imgUrl);
+  console.log(imgUrl[0]);
   return (
     <>
       <Bar />
       <Form>
         <ImgSection>
-          <Img src={imgUrl[1]} />
+          {!imgUrl[0] && (
+            <MdKeyboardArrowLeft
+              style={{
+                fontSize: '3vw',
+                position: 'absolute',
+                top: '6vw',
+                zIndex: 999,
+              }}
+              onClick={() => {
+                slideHandle(15);
+              }}
+            />
+          )}
+
+          <ImgSlider img={imgUrl} moveX={moveX} />
+          {imgUrl[imgUrl.lenght - 1] && (
+            <MdKeyboardArrowRight
+              style={{
+                fontSize: '3vw',
+                position: 'absolute',
+                top: '6vw',
+                right: 0,
+                zIndex: 999,
+              }}
+              onClick={() => {
+                slideHandle(-15);
+              }}
+            />
+          )}
         </ImgSection>
         <TextSection>
           <AddressInfo>{address} 의 집 전체 </AddressInfo>
@@ -50,15 +84,12 @@ const Bar = styled.div`
   margin: ${props => props.margin || '2vw 0'};
   background-color: #d3d3d3;
 `;
-const ImgSection = styled.span`
+const ImgSection = styled.div`
+  position: relative;
   margin: 0 1vw;
   width: 15vw;
   height: 100%;
-`;
-const Img = styled.img`
-  width: 15vw;
-  height: 100%;
-  border-radius: 10px;
+  overflow: hidden;
 `;
 
 const TextSection = styled.span`
