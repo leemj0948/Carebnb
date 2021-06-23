@@ -15,7 +15,6 @@ const HotelInfo = ({ data }) => {
     setMoveX(moveX + number);
   };
   const { address, fee, imgUrl, option1, option2, title } = data;
-  console.log(imgUrl[0]);
   return (
     <>
       <Bar />
@@ -35,8 +34,8 @@ const HotelInfo = ({ data }) => {
             />
           )}
 
-          <ImgSlider img={imgUrl} moveX={moveX} />
-          {imgUrl[imgUrl.lenght - 1] && (
+          <ImgSlider img={imgUrl} moveX={moveX} slideHandle={slideHandle} />
+          {!imgUrl[2] && (
             <MdKeyboardArrowRight
               style={{
                 fontSize: '3vw',
