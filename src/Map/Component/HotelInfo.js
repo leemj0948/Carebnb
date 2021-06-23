@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoHeartOutline, IoHeartSharp } from 'react-icons/io5';
 import Imgslider from './Imgslider';
+import { Arrow } from './Imgslider';
 
 const HotelInfo = ({ data }) => {
   const [isHeart, setIsHeart] = useState(true);
@@ -25,12 +26,12 @@ const HotelInfo = ({ data }) => {
           <Info2>{option2}</Info2>
           <HeartBtn onClick={clickHeart}>
             {isHeart ? (
-              <IoHeartOutline style={{ fontSize: '2vw' }} />
+              <IoHeartOutline style={{ fontSize: '2vw', color: 'red' }} />
             ) : (
-              <IoHeartSharp style={{ fontSize: '2vw' }} />
+              <IoHeartSharp style={{ fontSize: '2vw', color: 'red' }} />
             )}
           </HeartBtn>
-          <Price>₩{fee}/박</Price>
+          <Price>₩{fee.toLocaleString('ko-KR')} / 박</Price>
           <TotalPrice>총액 ₩ 0</TotalPrice>
         </TextSection>
       </Form>
@@ -42,7 +43,13 @@ const Form = styled.div`
   position: relative;
   width: 100%;
   height: 15vw;
-  ${({ theme }) => theme.flexSet('flex-start', 'flex-start')}
+  ${({ theme }) => theme.flexSet('flex-start', 'flex-start')};
+  cursor: pointer;
+  &:hover ${Arrow} {
+    display: block;
+    width: 3vw;
+    height: 3vw;
+  }
 `;
 const Bar = styled.div`
   width: ${props => props.width || '100%'};

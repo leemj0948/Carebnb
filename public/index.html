@@ -11,7 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Yeon+Sung&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3d0cd400e5ab0394af8b2dda91ecc7ba"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3d0cd400e5ab0394af8b2dda91ecc7ba&libraries=clusterer"></script>
+  
+  <!-- //카카오톡 로그인  -->
+
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    Kakao.init('3d0cd400e5ab0394af8b2dda91ecc7ba');
+    Kakao.isInitialized();
+  </script>
 
   
   <title>CareBnB</title>

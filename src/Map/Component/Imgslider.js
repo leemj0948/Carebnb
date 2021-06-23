@@ -55,7 +55,8 @@ const Img = styled.img`
   height: 15vw;
 `;
 
-const Arrow = styled.div`
+export const Arrow = styled.div`
+  display: none;
   position: absolute;
   top: 40%;
   left: ${props => props.left || ''};
@@ -65,6 +66,9 @@ const Arrow = styled.div`
   border-radius: 50%;
   background-color: lightgrey;
   z-index: 99;
+  :hover {
+    background-color: grey;
+  }
 `;
 
 export default Imgslider;

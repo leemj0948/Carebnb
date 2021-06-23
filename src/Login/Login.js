@@ -9,6 +9,7 @@ import {
   IoMailOutline,
 } from 'react-icons/io5';
 
+const { Kakao } = window;
 const Login = () => {
   const [firstNumber, setFirstNumber] = useState('');
   const [switchs, setSwitchs] = useState(false);
@@ -27,6 +28,25 @@ const Login = () => {
     } else {
       setSwitchs(false);
     }
+  };
+  const kakaoLogin = () => {
+    Kakao.Auth.login({
+      success: function (response) {
+        Kakao.API.request({
+          url: '/v2/user/me',
+          success: function (response) {
+            console.log(response);
+            //토큰값 받고 history.push할것
+          },
+          fail: function (error) {
+            console.log(error);
+          },
+        });
+      },
+      fail: function (error) {
+        console.log(error);
+      },
+    });
   };
   return (
     <Form>
@@ -86,11 +106,11 @@ const Login = () => {
             <Text>또는</Text>
             <Line />
           </OR>
-          <Btn>
+          <Btn onClick={() => kakaoLogin()}>
             <Logo>
               <IoLogoFacebook style={{ color: 'blue', fontSize: '1.5vw' }} />
             </Logo>
-            페이스북으로 로그인하기
+            카카오톡으로 로그인하기
           </Btn>
           <Btn>
             <Logo>
@@ -154,8 +174,8 @@ const Body = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10vw 3vw 1vw;
-  height: 44vw;
+  padding: 16vw 3vw 1vw;
+  height: 36vw;
   overflow: scroll;
 `;
 const BodyHeader = styled.div`
@@ -245,6 +265,7 @@ const Btn = styled.div`
   border-radius: 1vw;
   background-color: ${props => props.backColor || ''};
   text-align: center;
+  font-size: 1vw;
   cursor: pointer;
 `;
 const OR = styled.div`
