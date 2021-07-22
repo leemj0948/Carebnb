@@ -26,7 +26,6 @@ const Main = ({ UserInfoHidden, tooglePeopleModalExit, modalhandle }) => {
   //   UserInfoHidden = false;
   //   console.log('false');
   // }
-  console.log('modalhandle', modalhandle);
   return (
     <div
       className="main-container"

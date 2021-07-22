@@ -170,6 +170,7 @@ const Header = styled.div`
 const CloseBtn = styled.div`
   position: absolute;
   left: 2vw;
+  cursor: pointer;
 `;
 const Body = styled.div`
   display: flex;
