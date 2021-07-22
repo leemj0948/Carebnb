@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { tooglePeopleModalExit } from '../redux/booking/booking.action';
-import { toggleUserDropDown } from '../redux/header/header.action';
+import {
+  modalHandler,
+  toggleUserDropDown,
+} from '../redux/header/header.action';
 import BannerBox from './Components/banner/banner-box.components';
 import CityList from './Components/cityList/CityList.components';
 import Experience from './Components/experience/Experience.components';
 import LiveAnyWhere from './Components/liveAnywhere/live-anyWhere.components.js';
 import TopBanner from './Components/topbanner/top-banner.components';
+import Login from '../Login/Login';
 
 import './Main.scss';
-const Main = ({ UserInfoHidden, tooglePeopleModalExit }) => {
+const Main = ({ UserInfoHidden, tooglePeopleModalExit, modalhandle }) => {
   // const [exit, useExit] = useState(false);
   // const clickOustise = () => {
   //   useExit(true);
@@ -22,6 +26,7 @@ const Main = ({ UserInfoHidden, tooglePeopleModalExit }) => {
   //   UserInfoHidden = false;
   //   console.log('false');
   // }
+  console.log('modalhandle', modalhandle);
   return (
     <div
       className="main-container"
@@ -43,6 +48,7 @@ const Main = ({ UserInfoHidden, tooglePeopleModalExit }) => {
         desc={'숙소를 공유하여 부수입을 올리고 새로운 가능성을 만나세요.'}
         subtitle={'호스트가 되어보세요'}
       />
+      {modalhandle && <Login />}
     </div>
   );
 };
@@ -54,4 +60,8 @@ const Main = ({ UserInfoHidden, tooglePeopleModalExit }) => {
 //   // toggleUserDropDown: () => dispatch(toggleUserDropDown()),
 //   tooglePeopleModalExit: () => dispatch(tooglePeopleModalExit()),
 // });
-export default Main;
+const mapStateToProps = state => ({
+  modalhandle: state.header.modalhandle,
+});
+
+export default connect(mapStateToProps, null)(Main);

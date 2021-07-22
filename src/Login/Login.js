@@ -8,9 +8,11 @@ import {
   IoLogoGoogle,
   IoMailOutline,
 } from 'react-icons/io5';
+import { connect } from 'react-redux';
+import { modalHandler } from '../redux/header/header.action';
 
 const { Kakao } = window;
-const Login = () => {
+const Login = ({ onModal }) => {
   const [firstNumber, setFirstNumber] = useState('');
   const [switchs, setSwitchs] = useState(false);
   const clickHandler = () => {
@@ -52,7 +54,7 @@ const Login = () => {
     <Form>
       <LoginModal>
         <Header>
-          <CloseBtn>
+          <CloseBtn onClick={onModal}>
             <IoCloseOutline style={{ fontSize: '2.5vw' }} />
           </CloseBtn>
           <Title>로그인 또는 회원가입</Title>
@@ -290,5 +292,8 @@ const Logo = styled.span`
   left: 2vw;
   top: 1vw;
 `;
+const mapDispatchToProps = dispatch => ({
+  onModal: () => dispatch(modalHandler()),
+});
 
-export default Login;
+export default connect(null, mapDispatchToProps)(Login);

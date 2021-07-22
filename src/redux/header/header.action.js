@@ -13,3 +13,6 @@ export const toggleUserDropDown = () => ({
 export const toggleClickExit = () => ({
   type: HeaderType.USER_INFO_DROP_DOWN,
 });
+export const modalHandler = () => ({
+  type: HeaderType.MODAL_HANDLE,
+});

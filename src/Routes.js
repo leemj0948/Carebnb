@@ -6,7 +6,7 @@ import Header from './Main/Components/header/Header.components';
 import MapMainPage from './Map/MapMainPage';
 import Main from './Main/Main';
 // import Main from './pages/Main/Main';
-import Login from './Login/Login';
+// import Login from './Login/Login';
 import Footer from './Main/Components/footer/Footer';
 import Room from './Room/Components/Room';
 import PaymentDetail from './payment/PaymentDetail';
@@ -22,9 +22,9 @@ const Routes = () => {
       <Switch>
         <Route exact path="/map" component={MapMainPage} />
         <Route exact path="/" component={Main} />
-        <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/login" component={Login} /> */}
         <Route exact path="/room/:id" component={Room} />
-        {/* <Route exact path="/paymentDetail" component={PaymentDetail} /> */}
+        <Route exact path="/paymentDetail" component={PaymentDetail} />
       </Switch>
       <Footer />
     </Router>

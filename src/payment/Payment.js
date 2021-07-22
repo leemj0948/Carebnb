@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import StripeCheckout from 'react-stripe-checkout';
+// import StripeCheckout from 'react-stripe-checkout';
 
 const Payment = ({ totalprice }) => {
   const publishablekey = process.env.publishablekey;
@@ -30,22 +30,22 @@ const Payment = ({ totalprice }) => {
     console.log(token);
     alert('Payment Successful');
   };
-  return (
-    <StripeCheckout
-      label="Confrim and pay"
-      name="Carebnb"
-      local="ar"
-      billingaddress
-      shippingAddress
-      // image="https://svgshare.com/i/CUz.svg"
-      description={`Your total is $${totalprice}`}
-      // amount={priceForStripe}
-      panelLabel="Confrim and pay"
-      token={onToken}
-      stripeKey={publishablekey}
-      // style={element}
-    />
-  );
+  // return (
+  // <StripeCheckout
+  //   label="Confrim and pay"
+  //   name="Carebnb"
+  //   local="ar"
+  //   billingaddress
+  //   shippingAddress
+  //   // image="https://svgshare.com/i/CUz.svg"
+  //   description={`Your total is $${totalprice}`}
+  //   // amount={priceForStripe}
+  //   panelLabel="Confrim and pay"
+  //   token={onToken}
+  //   stripeKey={publishablekey}
+  //   // style={element}
+  // />
+  // );
 };
 
 const mapStateToProps = ({ booking: { totalprice } }) => ({
