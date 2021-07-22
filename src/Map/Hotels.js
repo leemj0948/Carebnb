@@ -4,17 +4,12 @@ import Fliter from './Component/Filter';
 import calendar from '../assets/calendar.svg';
 import HotelInfo from './Component/HotelInfo';
 import MapList from '../assets/data/maplist';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getEachHotelData } from '../redux/booking/booking.action';
 const Hotels = ({ totalGuest, startDay, endDay, sentHotelData }) => {
   // console.log(MapList);
   // console.log(totalGuest, startDay, endDay);
-=======
-
-const Hotels = props => {
->>>>>>> 7c8e77e... add: 클러스터러 css 수정중
   return (
     <Backgorund>
       <OptionInfo>
@@ -33,15 +28,11 @@ const Hotels = props => {
       </SmallInfo>
       <InfoSection to="/room">
         {MapList.map(elm => {
-<<<<<<< HEAD
           return (
             <Link to={`/room/${elm.id}`} onClick={() => sentHotelData(elm)}>
               <HotelInfo data={elm} />;
             </Link>
           );
-=======
-          return <HotelInfo data={elm} />;
->>>>>>> 5a8165b... add: hover시 이미지 화살표 기능 추가
         })}
       </InfoSection>
     </Backgorund>
