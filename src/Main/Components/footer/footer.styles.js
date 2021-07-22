@@ -34,8 +34,8 @@ export const CountrySetting = styled.div`
 `;
 export const SnSInfo = styled.div`
   justify-content: space-between;
-  display: flex;
   padding: 2.5vw 0;
+  display: flex;
   width: 10%;
   font-size: 23px;
 `;
