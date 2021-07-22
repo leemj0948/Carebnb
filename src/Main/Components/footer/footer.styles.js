@@ -1,35 +1,41 @@
 import styled from 'styled-components';
 export const FooterBox = styled.div`
-  margin-top: 3rem;
-  background-color: #d3d3d370;
-  padding-top: 2rem;
-  z-index: 0;
-  position: relative;
+  /* margin-top: 3rem; */
+  background-color: #dddddd;
+  /* padding-top: 4.5rem; */
+  z-index: 99999;
+  position: absolute;
   flex-direction: row;
-  top: 50vw;
+  /* top: 50vw; */
+  bottom: 0;
+  right: 0;
+  left: 0;
 `;
 export const FooterWrap = styled.div`
   display: flex;
   border-top: 1px solid #c1c1c1;
   justify-content: space-evenly;
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
 `;
 export const MainFooter = styled.div`
-  justify-content: space-between;
-  padding: 0px 0px 15px 10px;
-  width: 70%;
   display: flex;
+  justify-content: space-between;
+  /* padding: 0px 0px 15px 10px; */
+  padding: 2vw 0;
+  width: 100%;
+  height: 15vh;
 `;
 export const CountrySetting = styled.div`
-  width: 20%;
   display: flex;
   justify-content: space-evenly;
+  padding: 2vw 0;
+  width: 20%;
 `;
 export const SnSInfo = styled.div`
   justify-content: space-between;
   display: flex;
-  width: 10%;
+  padding: 2.5vw 0;
   width: 10%;
   font-size: 23px;
 `;

@@ -4,15 +4,15 @@ import Calender from '../../Main/Components/Calander.components/Calander';
 import MapList from '../../assets/data/maplist';
 import { DateRangePicker } from 'react-dates';
 import Payment from '../../payment/Payment';
-import {
-  MdKitchen,
-  MdWifi,
-  MdTv,
-  MdLocalParking,
-  MdAcUnit,
-  MdPool,
-} from 'react-icons/md';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {
+//   MdKitchen,
+//   MdWifi,
+//   MdTv,
+//   MdLocalParking,
+//   MdAcUnit,
+//   MdPool,
+// } from 'react-icons/md';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {
 //   utensils,
 //   wifi,
