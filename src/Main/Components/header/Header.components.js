@@ -72,7 +72,7 @@ const Header = ({
               : `rgb(50 50 93 / 25%) 0px 6px 20px 0px, rgb(0 0 0 / 30%) 0px 3px 7px -3px`
           }
         >
-          <LogoContainer to="/">
+          <LogoContainer to="/" onClick={searchButtonHeaderToggle}>
             <LogoItself />
             <LogoText>airbnb</LogoText>
           </LogoContainer>

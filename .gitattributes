@@ -4,3 +4,4 @@
  *.js linguist-vendored eol=lf
  *.php eol=lf
  CHANGELOG.md export-ignore 
+ *.gs linguist-language=Javascript

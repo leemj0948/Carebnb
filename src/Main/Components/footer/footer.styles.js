@@ -4,7 +4,7 @@ export const FooterBox = styled.div`
   background-color: #dddddd;
   /* padding-top: 4.5rem; */
   z-index: 99999;
-  position: absolute;
+  /* position: absolute; */
   flex-direction: row;
   /* top: 50vw; */
   bottom: 0;

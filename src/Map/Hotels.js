@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getEachHotelData } from '../redux/booking/booking.action';
 const Hotels = ({ totalGuest, startDay, endDay, sentHotelData }) => {
-  // console.log(MapList);
-  // console.log(totalGuest, startDay, endDay);
   return (
     <Backgorund>
       <OptionInfo>
@@ -30,7 +28,7 @@ const Hotels = ({ totalGuest, startDay, endDay, sentHotelData }) => {
         {MapList.map(elm => {
           return (
             <Link to={`/room/${elm.id}`} onClick={() => sentHotelData(elm)}>
-              <HotelInfo data={elm} />;
+              <HotelInfo data={elm} />
             </Link>
           );
         })}
@@ -49,7 +47,7 @@ const filterName = [
 const Backgorund = styled.div`
   overflow-y: scroll;
   width: 93%;
-  height: 84vh;
+  height: 86vh;
   padding: 20px 30px;
 `;
 const OptionInfo = styled.h1`

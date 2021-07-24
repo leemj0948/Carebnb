@@ -15,7 +15,9 @@ const UserDropDown = ({ onModal }) => {
         <Linked to="#" onClick={onModal}>
           로그인
         </Linked>
-        <Linked to="#">회원가입</Linked>
+        <Linked to="#" onClick={onModal}>
+          회원가입
+        </Linked>
         <Line />
         <Text>숙소호스트되기</Text>
         <Text>체험호스팅하기</Text>
