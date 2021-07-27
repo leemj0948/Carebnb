@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import Stripe from "stripe";
+=======
+import Stripe from 'stripe';
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
 
 const stripe = new Stripe(process.env.SECRET_KEY);
 
 const payment_intents = async (req, res) => {
+<<<<<<< HEAD
   if (req.method === "POST") {
     console.log('dd')
+=======
+  if (req.method === 'POST') {
+    console.log('dd');
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
     try {
       const { amount } = req.body;
       // Psst. For production-ready applications we recommend not using the
@@ -16,7 +25,11 @@ const payment_intents = async (req, res) => {
 
       const paymentIntent = await stripe.paymentIntents.create({
         amount,
+<<<<<<< HEAD
         currency: "usd"
+=======
+        currency: 'usd',
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
       });
 
       res.status(200).send(paymentIntent.client_secret);
@@ -24,9 +37,18 @@ const payment_intents = async (req, res) => {
       res.status(500).json({ statusCode: 500, message: err.message });
     }
   } else {
+<<<<<<< HEAD
     res.setHeader("Allow", "POST");
     res.status(405).end("Method Not Allowed");
   }
 };
 
 export default payment_intents; 
+=======
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+  }
+};
+
+export default payment_intents;
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout

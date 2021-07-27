@@ -15,6 +15,7 @@ const PaymentSuccess = ({
   const { city, address, title, fee } = eachHotelValues;
 
   return (
+<<<<<<< HEAD
     <div>
       <Container>
         {/* <Confetti width={width} height={height} numberOfPieces={450} /> */}
@@ -25,6 +26,22 @@ const PaymentSuccess = ({
           <LeftConfrimBox>
             <p className="alignLeft">{city}</p>
             <p className="alignLeft">{address}</p>
+=======
+    <div style={{ paddingBottom: '5rem' }}>
+      <Container>
+        {/* <Confetti width={width} height={height} numberOfPieces={450} /> */}
+        <Title>Booking is Confirmed!</Title>
+        <Message>Here is your Booking details</Message>
+
+        <div className="flex">
+          <LeftConfrimBox>
+            <p className="alignLeft">
+              <span class="padding">{address},</span>
+              <span>{city}</span>
+            </p>
+            {/* <p className="alignLeft"></p> */}
+            {/* <p className="alignLeft"></p> */}
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
             <p className="alignLeft">{title}</p>
             <PdateWrap>
               <Pbox>
@@ -50,6 +67,7 @@ const PaymentSuccess = ({
             </Pbox>
           </LeftConfrimBox>
           <RightConfrimBox>
+<<<<<<< HEAD
             <p>요금내역 </p>
             <p>
               <span>
@@ -64,6 +82,22 @@ const PaymentSuccess = ({
             <p>
               <span>Payment</span>
               <span>{totalprice}</span>
+=======
+            <p class="bold">Bills </p>
+            <p class="fee">
+              <span>
+                ${fee} x {stayDate} days
+              </span>
+              <span> $ {totalprice}</span>
+            </p>
+            <p class="borderTop">
+              <span>Total</span>
+              <span>$ {totalprice}</span>
+            </p>
+            <p class="borderTop">
+              <span>Payment</span>
+              <span>$ {totalprice}</span>
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
             </p>
           </RightConfrimBox>
         </div>
@@ -74,10 +108,17 @@ const PaymentSuccess = ({
 
 const Container = styled.div`
   font-family: 'Open Sans Condensed';
+<<<<<<< HEAD
   width: 70%;
   margin: 30px auto 0 auto;
   text-align: center;
 
+=======
+  font-size: 1.3rem;
+  width: 70%;
+  margin: 30px auto 0 auto;
+  text-align: center;
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
   padding: 2rem;
   .flex {
     display: flex;
@@ -94,6 +135,12 @@ const LeftConfrimBox = styled.div`
   .alignLeft {
     text-align: left;
     padding: 0.5rem 2rem;
+<<<<<<< HEAD
+=======
+    .padding {
+      padding-right: 0.5rem;
+    }
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
   }
 `;
 const RightConfrimBox = styled.div`
@@ -102,8 +149,22 @@ const RightConfrimBox = styled.div`
   margin: 0 0.5rem;
   border: 1px solid #dddddd;
   border-radius: 20px;
+<<<<<<< HEAD
   p {
     padding: 0.5rem 2rem;
+=======
+  .fee {
+    padding-bottom: 4rem;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .borderTop {
+    border-top: 1px solid #dddddd;
+  }
+  p {
+    padding: 1.5rem;
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
     display: flex;
     justify-content: space-between;
   }
@@ -113,7 +174,11 @@ const Title = styled.div`
 `;
 
 const Message = styled.div`
+<<<<<<< HEAD
   margin-top: 40px;
+=======
+  margin: 1.5rem;
+>>>>>>> 725c70ba... Almost Done, Stripe, paysuccessPage, header layout
 `;
 
 const Pbox = styled.div`
