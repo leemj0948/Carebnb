@@ -244,8 +244,6 @@ const MapList = [
       // '{MdKitchen}': 'Refrigerator',
       // '{MdWifi}': 'Wifi',
       // '{MdTv}': 'TV',
-      // '{MdLocalParking}': 'Free Parking',
-      // '{MdAcUnit}': 'Air conditioning',
     ],
     rating: 4.55,
   },
