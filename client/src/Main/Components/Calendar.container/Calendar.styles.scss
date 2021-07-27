@@ -1,0 +1,98 @@
+// // .CalenderBox {
+// //   margin-top: 3rem;
+// //   background-color: white;
+// //   z-index: 0;
+// //   position: relative;
+// //   flex-direction: row;
+// //   display: flex;
+// //   padding: 3rem;
+// // }
+// // .react-calendar {
+// //   border: none;
+// //   padding: 1rem;
+// // }
+// .singleDate {
+//   background-color: transparent;
+//   font-size: 12px;
+//   text-align: center;
+//   &:focus {
+//     background: transparent;
+//   }
+// }
+// .DateInput_input {
+//   background: transparent;
+//   font-size: 12px;
+// }
+
+// // NOTE: the order of these styles DO matter
+
+// // Will edit everything selected including everything between a range of dates
+// .CalendarDay__selected_span {
+//   background: #82e0aa; //background
+//   color: white; //text
+//   // border: 1px solid $light-red; //default styles include a border
+// }
+
+// // Will edit selected date or the endpoints of a range of dates
+// .CalendarDay__selected {
+//   // background: $dark-red;
+//   color: white;
+// }
+
+// // Will edit when hovered over. _span style also has this property
+// .CalendarDay__selected:hover {
+//   background: orange;
+//   color: white;
+// }
+// .DateInput {
+//   margin: 0;
+//   padding: 0;
+//   background: transparent;
+//   position: relative;
+//   display: inline-block;
+//   width: 130px;
+//   vertical-align: middle;
+// }
+
+// .DateInput_input {
+//   /* font-weight: 200; */
+//   /* font-size: 19px; */
+//   /* line-height: 24px; */
+//   color: #484848;
+//   background-color: transparent;
+//   width: 100%;
+//   /* padding: 11px 11px 9px; */
+//   /* border: 0; */
+//   /* border-top: 0; */
+//   /* border-right: 0; */
+//   /* border-bottom: 2px solid transparent; */
+//   /* border-left: 0; */
+//   /* border-radius: 0; */
+// }
+
+// // Will edit when the second date (end date) in a range of dates
+// // is not yet selected. Edits the dates between your mouse and said date
+// .CalendarDay__hovered_span:hover,
+// .CalendarDay__hovered_span {
+//   background: brown;
+// }
+// .DateRangePickerInput__block {
+//   background-color: transparent;
+//   display: inline-block;
+//   width: 100px;
+// .DateInput_input {
+//   background: transparent;
+//   font-size: 12px;
+//   padding: 0px;
+//   text-align: center;
+// }
+// .SingleDatePickerInput__withBorder {
+//   /* border-radius: 2px; */
+//   /* border: 1px solid #dbdbdb;*/
+// }
+
+// .SingleDatePickerInput {
+//   display: inline-block;
+//   background-color: transparent;
+//   border: none;
+// }
