@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const DropDownWrap = styled.div`
   button {
+    font-size: 1.3rem;
     border: none;
     background: none;
     padding: 0.7rem;

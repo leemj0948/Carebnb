@@ -21,8 +21,8 @@ const PeopleModal3 = ({ plusInfantGuest, infant, minusInfantGuest }) => {
       <ModalBox>
         <ModalWrap>
           <TypeBox>
-            <Subtitle>{'유아'}</Subtitle>
-            <AgeRange>{'0~만 2세미만 '}</AgeRange>
+            <Subtitle>{'Infants'}</Subtitle>
+            <AgeRange>{'Under 2'}</AgeRange>
             {/* <Subtitle>{props.types}</Subtitle>
             <AgeRange>{props.ages}</AgeRange> */}
           </TypeBox>

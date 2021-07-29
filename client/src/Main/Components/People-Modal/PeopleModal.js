@@ -28,8 +28,8 @@ const PeopleModal = ({ plusAdultGuest, adult, minusAdultGuest }) => {
       <ModalBox>
         <ModalWrap>
           <TypeBox>
-            <Subtitle>{'성인'}</Subtitle>
-            <AgeRange>{'만 13세 이상'}</AgeRange>
+            <Subtitle>{'Adults'}</Subtitle>
+            <AgeRange>{'Ages 13 or above'}</AgeRange>
           </TypeBox>
           <PeopleAmountBtn>
             <ChangeNo value={adult} onClick={() => minusAdultGuest(adult)}>

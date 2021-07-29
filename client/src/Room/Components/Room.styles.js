@@ -72,6 +72,7 @@ export const BillBox = styled.div`
   margin: 0 auto;
   padding: 2%;
   width: 30%;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   border: 1px solid #dddddd;
@@ -95,6 +96,8 @@ export const BillBox = styled.div`
 export const Content = styled.div`
   width: 80%;
   margin: 0 auto;
+  font-family: 'Open Sans Condensed';
+  font-size: 1.2rem;
 `;
 
 export const Subtitle = styled.h1`
@@ -115,6 +118,7 @@ export const Button = styled.button`
   border-radius: 6px;
   width: 100%;
   height: 2.5rem;
+  font-size: 1.4rem;
 `;
 export const Line = styled.p`
   display: flex;
@@ -127,6 +131,7 @@ export const AdditionalFee = styled.p`
   display: flex;
   justify-content: space-between;
   line-height: 1.5rem;
+  padding: 1rem 0;
 `;
 export const Price = styled.span`
   font-weight: bold;
@@ -134,7 +139,7 @@ export const Price = styled.span`
 `;
 
 export const Notice = styled.span`
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: center;
 `;

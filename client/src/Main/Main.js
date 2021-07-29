@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
+import Login from '../Login/Login';
 import BannerBox from './Components/banner/banner-box.components';
 import CityList from './Components/cityList/CityList.components';
 import Experience from './Components/experience/Experience.components';
@@ -7,7 +9,7 @@ import LiveAnyWhere from './Components/liveAnywhere/live-anyWhere.components.js'
 import TopBanner from './Components/topbanner/top-banner.components';
 
 import './Main.scss';
-const Main = () => {
+const Main = ({ modalhandle }) => {
   return (
     <MainContainer>
       <TopBanner />
@@ -27,6 +29,7 @@ const Main = () => {
         }
         subtitle={'Try hosting'}
       />
+      {modalhandle && <Login />}
     </MainContainer>
   );
 };
@@ -34,5 +37,8 @@ const Main = () => {
 const MainContainer = styled.div`
   height: 360vh;
 `;
+const mapStateToProps = state => ({
+  modalhandle: state.header.modalhandle,
+});
 
-export default Main;
+export default connect(mapStateToProps, null)(Main);

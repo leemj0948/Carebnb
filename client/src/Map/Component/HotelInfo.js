@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { IoHeartOutline, IoHeartSharp } from 'react-icons/io5';
+import { IoStar, IoHeartOutline, IoHeartSharp } from 'react-icons/io5';
 import Imgslider from './Imgslider';
 import { connect } from 'react-redux';
-
 const HotelInfo = ({ data, stayDate }) => {
   const [isHeart, setIsHeart] = useState(true);
   const clickHeart = () => {
@@ -39,7 +38,10 @@ const HotelInfo = ({ data, stayDate }) => {
             <span className="bold">${fee}</span>/night
           </Price>
           <RatingPrice>
-            <span>{rating}</span>
+            <span>
+              <IoStar style={{ color: 'red' }} />
+              {rating}
+            </span>
             <span> ${total} total</span>
           </RatingPrice>
         </TextSection>
@@ -87,14 +89,14 @@ const Info1 = styled.span`
   line-height: 18px;
   align-items: center;
   width: 100%;
-  color: #c0c0c0;
+  color: gray;
 `;
 const Info2 = styled.span`
   font-size: 1rem;
   line-height: 18px;
   align-items: center;
   width: 100%;
-  color: #c0c0c0;
+  color: gray;
 `;
 const HeartBtn = styled.span`
   color: #fe7073;
@@ -105,6 +107,9 @@ const HeartBtn = styled.span`
 `;
 const RatingPrice = styled.p`
   display: flex;
+  padding-top: 5.2rem;
+  font-size: 1.1rem;
+  justify-content: space-between;
 `;
 const Price = styled.span`
   position: absolute;

@@ -21,7 +21,7 @@ const Hotels = ({ totalGuest, startDay, endDay, sentHotelData }) => {
         <Info>
           <Calendar src={calendar} />
           <Bold>Book soon.</Bold> 28% of places in New York for your dates are
-          already booked on Airbnb.
+          already booked on Carebnb.
         </Info>
       </SmallInfo>
       <InfoSection to="/room">

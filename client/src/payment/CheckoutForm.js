@@ -78,7 +78,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         </p>
         <Notice>
           By selecting the button below, I agree to the Host's House Rules,
-          Airbnb's COVID-19 Safety Requirements, and the Guest Refund Policy.
+          Carebnb's COVID-19 Safety Requirements, and the Guest Refund Policy.
         </Notice>
         {/* <Payment /> */}
       </Rule>

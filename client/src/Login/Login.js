@@ -57,20 +57,20 @@ const Login = ({ onModal }) => {
           <CloseBtn onClick={onModal}>
             <IoCloseOutline style={{ fontSize: '2.5vw' }} />
           </CloseBtn>
-          <Title>로그인 또는 회원가입</Title>
+          <Title>Log in or sign up</Title>
         </Header>
         <Body>
-          <BodyHeader>케어비엔비에 오신 것을 환영합니다.</BodyHeader>
+          <BodyHeader>Welcome to Carebnb.</BodyHeader>
           <PhoneInfo>
             <CountryPack>
-              국가/지역
+              Nation/Region
               <Country name="Number" id="number">
                 <option value="+82" selected>
-                  한국 (+82)
+                  KR (+82)
                 </option>
-                <option value="+33">프랑스 (+33)</option>
-                <option value="+86">중국 (+86)</option>
-                <option value="+34">스페인 (+34)</option>
+                <option value="+33">FR (+33)</option>
+                <option value="+86">CN (+86)</option>
+                <option value="+34">SP (+34)</option>
               </Country>
             </CountryPack>
             <PhonePack
@@ -79,7 +79,7 @@ const Login = ({ onModal }) => {
               }}
             >
               <Placeholder>
-                <PhName switchs={switchs}>전화번호</PhName>
+                <PhName switchs={switchs}>Phone Number</PhName>
               </Placeholder>
               <InputNumber>
                 <FirstNumber>{switchs && firstNumber}</FirstNumber>
@@ -92,8 +92,8 @@ const Login = ({ onModal }) => {
               clickEventOff();
             }}
           >
-            전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및
-            데이터 요금이 부과됩니다.
+            I'll check the phone number by phone or text. Regular text message
+            rates and There will be a data charge.
           </Info>
           <Btn
             margin="1vw 0"
@@ -101,36 +101,36 @@ const Login = ({ onModal }) => {
             backColor="rgb(208, 52, 97)"
             border="none"
           >
-            계속
+            Continue
           </Btn>
           <OR>
             <Line />
-            <Text>또는</Text>
+            <Text>or</Text>
             <Line />
           </OR>
           <Btn onClick={() => kakaoLogin()}>
             <Logo>
               <IoLogoFacebook style={{ color: 'blue', fontSize: '1.5vw' }} />
             </Logo>
-            카카오톡으로 로그인하기
+            Continue with KakaoTalk
           </Btn>
           <Btn>
             <Logo>
               <IoLogoGoogle style={{ fontSize: '1.5vw' }} />
             </Logo>
-            구글로 로그인하기
+            Continue with Google
           </Btn>
           <Btn>
             <Logo>
               <IoLogoApple style={{ fontSize: '1.5vw' }} />
             </Logo>
-            Apple계정으로 로그인하기
+            Continue with Apple
           </Btn>
           <Btn>
             <Logo>
               <IoMailOutline style={{ fontSize: '1.5vw' }} />
             </Logo>
-            이메일로 로그인하기
+            Continue with Email
           </Btn>
         </Body>
       </LoginModal>
@@ -143,7 +143,8 @@ const Form = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-
+  font-family: 'Open Sans Condensed';
+  font-size: 1.3rem;
   background: rgba(0, 0, 0, 0.6);
   z-index: 2000;
 `;
@@ -198,7 +199,7 @@ const CountryPack = styled.div`
   height: 4vw;
   border: 1px solid #484848;
   border-radius: 4px;
-  font-size: 0.9vw;
+  font-size: 1rem;
   color: #484848;
   cursor: pointer;
 `;
@@ -254,7 +255,7 @@ const Phone = styled.input`
 `;
 const Info = styled.p`
   margin: 0.9vw 0;
-  font-size: 0.8vw;
+  font-size: 1rem;
   color: #484848;
 `;
 const Btn = styled.div`
@@ -268,7 +269,7 @@ const Btn = styled.div`
   border-radius: 1vw;
   background-color: ${props => props.backColor || ''};
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.2rem;
   cursor: pointer;
 `;
 const OR = styled.div`

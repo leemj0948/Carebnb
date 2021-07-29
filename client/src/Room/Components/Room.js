@@ -203,6 +203,7 @@ const Room = ({
             </Line>
           </div>
           <DateRangePicker
+            style={{ width: '320px', margin: '1rem 0' }}
             // onDatesChange={setStart}
             focusedInput={focusedInput}
             onFocusChange={focusedInput => setFocusedInput(focusedInput)}

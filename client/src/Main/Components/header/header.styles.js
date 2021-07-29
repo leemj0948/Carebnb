@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { IoSearch } from 'react-icons/io5';
 import Calender from '../Calander.components/Calander';
 
-// import { ReactComponent as Logo } from '../../../src/assets/airbnb.svg';
-
 export const HeaderContainer = styled.div`
   position: relative;
   z-index: 5;

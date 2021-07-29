@@ -21,8 +21,8 @@ const PeopleModal2 = ({ plusChildGuest, guest, minusChildGuest }) => {
       <ModalBox>
         <ModalWrap>
           <TypeBox>
-            <Subtitle>{'어린이'}</Subtitle>
-            <AgeRange>{'만 2~12세 이상'}</AgeRange>
+            <Subtitle>{'Children'}</Subtitle>
+            <AgeRange>{'Ages 2–12'}</AgeRange>
           </TypeBox>
           <PeopleAmountBtn>
             <ChangeNo value={guest} onClick={() => minusChildGuest(guest)}>

@@ -10,7 +10,7 @@ const LogoTriggeer = ({ goHome }) => {
     <LogoBox>
       <Link to="/">
         <LogoItself onClick={goHome} />
-        <LogoText>airbnb</LogoText>
+        <LogoText>Carebnb</LogoText>
       </Link>
     </LogoBox>
   );
@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export const LogoBox = styled.div`
-  width: 120px;
+  width: 150px;
   height: 70px;
   display: flex;
   flex-direction: row;

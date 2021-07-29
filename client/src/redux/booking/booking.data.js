@@ -1,17 +1,17 @@
 export const BOOKING_TYPE_DATA = {
   adult: {
-    type: '성인',
-    age: '만 13세 이상',
+    type: 'Adults',
+    age: 'Ages 13 or above',
     id: 1,
   },
   child: {
-    type: '어린이',
-    age: '만 2~12세 이하',
+    type: 'Children',
+    age: 'Ages 2–12',
     id: 2,
   },
   infant: {
-    type: '유아',
-    age: '0~만 2세미만',
+    type: 'Infants',
+    age: 'Under 2',
     id: 3,
   },
 };

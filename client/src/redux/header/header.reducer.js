@@ -34,7 +34,6 @@ const headerReducer = (state = INITAL_STATE, action) => {
       return {
         ...state,
         modalhandle: !state.modalhandle,
-        UserInfoHidden: true,
       };
     default:
       return state;

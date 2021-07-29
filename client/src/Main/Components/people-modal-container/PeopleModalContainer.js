@@ -26,6 +26,7 @@ export const PeopleModalContainerDiv = styled.div`
   padding: 20px;
   background-color: white;
   top: 134px;
+  font-size: 1.1rem;
 
   right: 282px;
   z-index: 5;
